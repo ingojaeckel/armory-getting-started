@@ -1,0 +1,12 @@
+image: ingojaeckel/golang-awscli:latest
+
+pipelines:
+  custom:
+    deploy:
+      - step:
+          script:
+            - ./deploy-armory.sh
+  default:
+    - step:
+        script:
+          - ./build-armory.sh
